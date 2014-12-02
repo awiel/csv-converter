@@ -18,7 +18,7 @@ Always check the results.
 * npm install ya-csv
 
 ##Run:
-	$ node csv2spss input.csv output.csv
+	$ node simpleCsv2Csv input.csv output.csv
 
 ##Options:
 Edit the javascript file to change one of these options:
