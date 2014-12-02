@@ -17,7 +17,7 @@ npm install ya-csv
 
 ##Run:
 node csv2spss
-todo: work in progress .....
+
 
 ##Changelog
 - v0.0.1 - there is always a first step
