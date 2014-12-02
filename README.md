@@ -12,8 +12,8 @@ Hier wordt gewerkt aan de nodige functionaliteit. Doe mee door uw wensen aan te 
 
 
 ##Install:
-npm install nodejs
-npm install ya-csv
+* npm install nodejs
+* npm install ya-csv
 
 ##Run:
 node csv2spss
