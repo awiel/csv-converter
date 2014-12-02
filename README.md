@@ -7,14 +7,17 @@ Tool to convert csv files into csv format which can be used to analyse with SPSS
 
 Voor conversie van bestanden die gemeenten ontvangen tbv de 3 decentralisaties. Bestanden in csv formaat worden geschikt gemaakt voor gebruik in SPSS of ander statistiek programma. 
 
-Requests:
-=========
+##Requests:
 Hier wordt gewerkt aan de nodige functionaliteit. Doe mee door uw wensen aan te geven bij dit project.
 
 
-Install:
-========
+##Install:
 npm install nodejs
 npm install ya-csv
 
+##Run:
+node csv2spss
 todo: work in progress .....
+
+##Changelog
+- v0.0.1 - there is always a first step
