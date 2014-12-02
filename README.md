@@ -5,6 +5,9 @@ Tool for 3 decentralisaties. Tool converts csv into reorganized csv files for an
 
 Voor conversie van bestanden die gemeenten ontvangen tbv de 3 decentralisaties. Bestanden in csv formaat worden geschikt gemaakt voor gebruik in SPSS of ander statistiek programma. 
 
+* simpleCsv2Csv.js	
+	simple conversion from 'x'-records with same primary key and one secondary key into one record for each primary key followed by all posible secondary keys (see example)
+
 ##Requests:
 Send me a request if you want more than is already available. :-)
 
@@ -12,10 +15,14 @@ Send me a request if you want more than is already available. :-)
 Always check the results.
 
 ##Install:
-* npm install nodejs
+* create a workfolder
+* cd into workfolder
+* npm install nodejs (nodejs can be installed globally with option '-g' !)
 * npm install ya-csv
 
 ##Run:
+	$ cd into workfolder
+	$ copy input dataset into workfolder (e.g. input.csv)
 	$ node simpleCsv2Csv input.csv output.csv
 
 ##Options:
@@ -29,7 +36,7 @@ Edit the javascript file to change one of these options:
 		columnsFromHeader:	false // true when first record contains columnlabels
 	}
 
-##Example
+##Example for simpleCsv2Csv.js
 Input csv contains:
 
 	12345;AAA;123,11;7263,11;bbb;zz1
