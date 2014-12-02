@@ -51,3 +51,7 @@ log:
 
 ##Changelog
 - v0.0.1 - there is always a first step
+
+##License
+- 3D-SocialTransition is licensed under the Affero GNU General Public License 3 or later (AGPL 3+).
+
