@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Csv-converter by awiel</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Csv-converter</h1>
+        <h2>CSV converter to reorganize content of csv-file e.g. for analyse purpose.</h2>
+        <a href="https://github.com/awiel/csv-converter" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="csv-converter" class="anchor" href="#csv-converter" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSV-converter</h1>
+
+<p>Conversion tools for csv files, e.g. reorganized csv content for analyse purpose, use in statistic applications like SPSS.</p>
+
+<ul>
+<li>simpleCsv2Csv.js<br>
+'simple' conversion from 'n'-records with same primary key and one secondary key per record into one record for each distinct primary key extended with all possible secondary keys (see example). All primary and secondary keys wil be sorted asc.<br>
+</li>
+</ul>
+
+<h2>
+<a id="requestsissues" class="anchor" href="#requestsissues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requests/issues:</h2>
+
+<p>Send me a request if you want more than is already available, or register your issue.</p>
+
+<h2>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer:</h2>
+
+<p>Always check the results. Use this software as is and at your own risk. Tool is not tested with large amounts of data or on your configuration ;-) </p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install:</h2>
+
+<ul>
+<li>create a workfolder</li>
+<li>cd into workfolder</li>
+<li>npm install nodejs (nodejs can be installed globally with option '-g' !)</li>
+<li>npm install ya-csv</li>
+</ul>
+
+<h2>
+<a id="run" class="anchor" href="#run" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run:</h2>
+
+<pre><code>    $ cd into workfolder
+    $ copy input dataset into workfolder (e.g. input.csv)
+    $ node simpleCsv2Csv input.csv output.csv
+</code></pre>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options:</h2>
+
+<p>Edit the javascript file to change one of these options:</p>
+
+<pre><code>    var options = {
+        inputSeparator:     ';',  // csv column separator
+        outputSeparator:    ';',  // csv column separator
+        primaryKeyColumn:   0,    // column that contains primary key, 0=first column
+        secondaryKeyColumn: 1,  // column that contains secondary key, 0=first column
+        columnsFromHeader:  false // true when first record contains columnlabels
+    }
+</code></pre>
+
+<h2>
+<a id="example-for-simplecsv2csvjs" class="anchor" href="#example-for-simplecsv2csvjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example for simpleCsv2Csv.js</h2>
+
+<p>Input csv contains:</p>
+
+<pre><code>    12345;AAA;123,11;7263,11;bbb;zz1
+    12345;BBB;123,12;7263,11;bbb;zz2
+    12346;AAA;123,22;7263,11;bbb;zz21
+    12346;ZZZ;123,26;7263,11;bbb;zz25
+</code></pre>
+
+<p>results:</p>
+
+<pre><code>    12345;AAA;123,11;7263,11;bbb;zz1;BBB;123,12;7263,11;bbb;zz2;ZZZ;;;;;;;
+    12346;AAA;123,22;7263,11;bbb;zz21;BBB;;;;;;;ZZZ;123,26;7263,11;bbb;zz25;
+</code></pre>
+
+<p>log:</p>
+
+<pre><code>    Verwerk file input.csv naar output.csv
+    Einde verwerking file input.csv (4 records)  naar output.csv (2 records)
+</code></pre>
+
+<h2>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h2>
+
+<ul>
+<li>v0.0.1 - there is always a first step</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<ul>
+<li>CSV-converter is licensed under the GNU General Public License 3.</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/awiel/csv-converter/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/awiel/csv-converter/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/awiel/csv-converter"></a> is maintained by <a href="https://github.com/awiel">awiel</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
