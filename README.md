@@ -56,5 +56,5 @@ log:
 - v0.0.1 - there is always a first step
 
 ##License
-- 3D-SocialTransition is licensed under the GNU General Public License 3.
+- CSV-converter is licensed under the GNU General Public License 3.
 
