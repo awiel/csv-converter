@@ -1,18 +1,16 @@
-3D-SocialTransition
+CSV-converter
 ===================
 
-Tool for 3 decentralisaties. Tool converts csv into reorganized csv files for analyse purpose.
-
-Voor conversie van bestanden die gemeenten ontvangen tbv de 3 decentralisaties. Bestanden in csv formaat worden geschikt gemaakt voor gebruik in SPSS of ander statistiek programma. 
+Conversion tools for csv files, e.g. reorganized csv content for analyse purpose, use in statistic applications like SPSS.
 
 * simpleCsv2Csv.js	
-	simple conversion from 'x'-records with same primary key and one secondary key into one record for each primary key followed by all posible secondary keys (see example)
+	'simple' conversion from 'n'-records with same primary key and one secondary key per record into one record for each distinct primary key extended with all possible secondary keys (see example). All primary and secondary keys wil be sorted asc.  
 
-##Requests:
-Send me a request if you want more than is already available. :-)
+##Requests/issues:
+Send me a request if you want more than is already available, or register your issue.
 
 ##Disclaimer:
-Always check the results.
+Always check the results. Use this software as is and at your own risk. Tool is not tested with large amounts of data or on your configuration ;-) 
 
 ##Install:
 * create a workfolder
