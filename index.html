@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta name="description" content="Csv-converter : CSV converter to reorganize content of csv-file e.g. for analyse purpose.">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Csv-converter by awiel</title>
+    <title>Csv-converter</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Csv-converter</h1>
-        <h2>CSV converter to reorganize content of csv-file e.g. for analyse purpose.</h2>
-        <a href="https://github.com/awiel/csv-converter" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/awiel/csv-converter">View on GitHub</a>
+
+          <h1 id="project_title">Csv-converter</h1>
+          <h2 id="project_tagline">CSV converter to reorganize content of csv-file e.g. for analyse purpose.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/awiel/csv-converter/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/awiel/csv-converter/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a id="csv-converter" class="anchor" href="#csv-converter" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSV-converter</h1>
 
 <p>Conversion tools for csv files, e.g. reorganized csv content for analyse purpose, use in statistic applications like SPSS.</p>
@@ -52,19 +55,18 @@
 <h2>
 <a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install:</h2>
 
-<ul>
-<li>create a workfolder</li>
-<li>cd into workfolder</li>
-<li>npm install nodejs (nodejs can be installed globally with option '-g' !)</li>
-<li>npm install ya-csv</li>
-</ul>
+<pre><code># create a workfolder
+# cd into workfolder
+$ npm install nodejs    # (nodejs can be installed globally with option '-g' !)
+$ npm install ya-csv
+</code></pre>
 
 <h2>
 <a id="run" class="anchor" href="#run" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run:</h2>
 
-<pre><code>    $ cd into workfolder
-    $ copy input dataset into workfolder (e.g. input.csv)
-    $ node simpleCsv2Csv input.csv output.csv
+<pre><code># cd into workfolder
+# copy input dataset into workfolder (e.g. input.csv)
+$ node simpleCsv2Csv input.csv output.csv
 </code></pre>
 
 <h2>
@@ -72,13 +74,13 @@
 
 <p>Edit the javascript file to change one of these options:</p>
 
-<pre><code>    var options = {
-        inputSeparator:     ';',  // csv column separator
-        outputSeparator:    ';',  // csv column separator
-        primaryKeyColumn:   0,    // column that contains primary key, 0=first column
-        secondaryKeyColumn: 1,  // column that contains secondary key, 0=first column
-        columnsFromHeader:  false // true when first record contains columnlabels
-    }
+<pre><code>var options = {
+    inputSeparator:     '|',  // csv column separator
+    outputSeparator:    '|',  // csv column separator
+    primaryKeyColumn:   0,    // column that contains primary key, 0=first column
+    secondaryKeyColumn: 1,  // column that contains secondary key, 0=first column
+    columnsFromHeader:  false // true when first record contains columnlabels
+}
 </code></pre>
 
 <h2>
@@ -86,22 +88,22 @@
 
 <p>Input csv contains:</p>
 
-<pre><code>    12345;AAA;123,11;7263,11;bbb;zz1
-    12345;BBB;123,12;7263,11;bbb;zz2
-    12346;AAA;123,22;7263,11;bbb;zz21
-    12346;ZZZ;123,26;7263,11;bbb;zz25
+<pre><code>12345|AAA|123,11|7263,11|bbb|zz1
+12345|BBB|123,12|7263,11|bbb|zz2
+12346|AAA|123,22|7263,11|bbb|zz21
+12346|ZZZ|123,26|7263,11|bbb|zz25
 </code></pre>
 
 <p>results:</p>
 
-<pre><code>    12345;AAA;123,11;7263,11;bbb;zz1;BBB;123,12;7263,11;bbb;zz2;ZZZ;;;;;;;
-    12346;AAA;123,22;7263,11;bbb;zz21;BBB;;;;;;;ZZZ;123,26;7263,11;bbb;zz25;
+<pre><code>12345|AAA|123,11|7263,11|bbb|zz1|BBB|123,12|7263,11|bbb|zz2|ZZZ|||||||
+12346|AAA|123,22|7263,11|bbb|zz21|BBB|||||||ZZZ|123,26|7263,11|bbb|zz25|
 </code></pre>
 
 <p>log:</p>
 
-<pre><code>    Verwerk file input.csv naar output.csv
-    Einde verwerking file input.csv (4 records)  naar output.csv (2 records)
+<pre><code>Verwerk file input.csv naar output.csv
+Einde verwerking file input.csv (4 records)  naar output.csv (2 records)
 </code></pre>
 
 <h2>
@@ -117,25 +119,18 @@
 <ul>
 <li>CSV-converter is licensed under the GNU General Public License 3.</li>
 </ul>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/awiel/csv-converter/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/awiel/csv-converter/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/awiel/csv-converter"></a> is maintained by <a href="https://github.com/awiel">awiel</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Csv-converter maintained by <a href="https://github.com/awiel">awiel</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
