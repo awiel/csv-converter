@@ -26,13 +26,13 @@ Always check the results. Use this software as is and at your own risk. Tool is 
 ##Options:
 Edit the option file to change one of these options:
 
-"inputSeparator": ";"
-"outputSeparator": ";"
-"primaryKeyColumn":	1 // 1=first column
-"secondaryKeyColumn": 2 // 1=first column
-"columnsFromHeader": false
-"primaryKeyName": "BSN"
-"action": "countsec"   // countsec=count secundairy; ''=column grouping of secundaryKeyColumn 
+ "inputSeparator": ";"
+ "outputSeparator": ";"
+ "primaryKeyColumn":	1 // 1=first column
+ "secondaryKeyColumn": 2 // 1=first column
+ "columnsFromHeader": false
+ "primaryKeyName": "BSN"
+ "action": "countsec"   // countsec=count secundairy; ''=column grouping of secundaryKeyColumn 
 
 
 ##Example for simpleCsv2Csv.js
