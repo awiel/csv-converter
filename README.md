@@ -18,11 +18,6 @@ Always check the results. Use this software as is and at your own risk. Tool is 
 	$ npm install nodejs 	# (nodejs can be installed globally with option '-g' !)
 	$ npm install ya-csv
 
-##Run:
-	# cd into workfolder
-	# copy input dataset into workfolder (e.g. input.csv)
-	$ node index option.txt input.csv output.csv
-
 ##Options:
 Edit the option file to change one of these options:
 
@@ -34,8 +29,13 @@ Edit the option file to change one of these options:
 	"primaryKeyName": "BSN"
 	"action": "countsec"   // countsec=count secundairy; ''=column grouping of secundaryKeyColumn 
 
+##Run:
+	# cd into workfolder
+	# copy input dataset into workfolder (e.g. input.csv)
+	$ node index option.txt input.csv output.csv
 
-##Example for simpleCsv2Csv.js
+
+##Example
 Input csv contains:
 
 	Bsn  ;cat;bdr1;  bdr2;
@@ -57,8 +57,16 @@ results for option action='cs':
 
 log:
 
-	Verwerk file input.csv naar output.csv
-	Einde verwerking file input.csv (4 records)  naar output.csv (2 records)
+	Verwerk file input.csv naar output.csv options: optionCountsec.txt
+	Option: "inputSeparator": ";"
+	Option: "outputSeparator": ";"
+	Option: "primaryKeyColumn":	1
+	Option: "secondaryKeyColumn": 2
+	Option: "columnsFromHeader": false
+	Option: "primaryKeyName": "BSN"
+	Option: "action": "countsec"
+	Action: countsec
+	Einde verwerking file optionCountsec.txt (4 records)  naar input.csv (2 records)
 
 ##Changelog
 - v0.1.0 - 'cs' action ; option file
