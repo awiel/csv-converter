@@ -21,7 +21,7 @@ Always check the results. Use this software as is and at your own risk. Tool is 
 ##Run:
 	# cd into workfolder
 	# copy input dataset into workfolder (e.g. input.csv)
-	$ node simpleCsv2Csv option.txt input.csv output.csv
+	$ node index option.txt input.csv output.csv
 
 ##Options:
 Edit the option file to change one of these options:
