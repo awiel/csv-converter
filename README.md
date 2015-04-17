@@ -21,31 +21,39 @@ Always check the results. Use this software as is and at your own risk. Tool is 
 ##Run:
 	# cd into workfolder
 	# copy input dataset into workfolder (e.g. input.csv)
-	$ node simpleCsv2Csv input.csv output.csv
+	$ node simpleCsv2Csv option.txt input.csv output.csv
 
 ##Options:
-Edit the javascript file to change one of these options:
+Edit the option file to change one of these options:
 
-	var options = {
-		inputSeparator: 	'|',  // csv column separator
-		outputSeparator: 	'|',  // csv column separator
-		primaryKeyColumn:	0,    // column that contains primary key, 0=first column
-		secondaryKeyColumn:	1,  // column that contains secondary key, 0=first column
-		columnsFromHeader:	false // true when first record contains columnlabels
-	}
+"inputSeparator": ";"
+"outputSeparator": ";"
+"primaryKeyColumn":	1 // 1=first column
+"secondaryKeyColumn": 2 // 1=first column
+"columnsFromHeader": false
+"primaryKeyName": "BSN"
+"action": "countsec"   // countsec=count secundairy; ''=column grouping of secundaryKeyColumn 
+
 
 ##Example for simpleCsv2Csv.js
 Input csv contains:
 
-	12345|AAA|123,11|7263,11|bbb|zz1
-	12345|BBB|123,12|7263,11|bbb|zz2
-	12346|AAA|123,22|7263,11|bbb|zz21
-	12346|ZZZ|123,26|7263,11|bbb|zz25
+	Bsn  ;cat;bdr1;  bdr2;
+	12345;AAA;123,11;7263,11
+	12345;BBB;123,12;7263,11
+	12346;AAA;123,22;7263,11
+	12346;ZZZ;123,26;7263,11
 
-results:
+results for option action='':
 
-	12345|AAA|123,11|7263,11|bbb|zz1|BBB|123,12|7263,11|bbb|zz2|ZZZ|||||||
-	12346|AAA|123,22|7263,11|bbb|zz21|BBB|||||||ZZZ|123,26|7263,11|bbb|zz25|
+	12345;AAA;123,11;7263,11;BBB;123,12;7263,11;ZZZ;      ;       ;
+	12346;AAA;123,22;7263,11;BBB;      ;       ;ZZZ;123,26;7263,11;
+
+results for option action='cs':
+
+	BSN ;AAA;BBB;ZZZ;Total
+	12345  ;  1;  1;  0; 2
+	12346  ;  1;  0;  1; 2
 
 log:
 
@@ -53,6 +61,7 @@ log:
 	Einde verwerking file input.csv (4 records)  naar output.csv (2 records)
 
 ##Changelog
+- v0.1.0 - 'cs' action ; option file
 - v0.0.1 - there is always a first step
 
 ##License

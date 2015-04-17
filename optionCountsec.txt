@@ -1,0 +1,7 @@
+"inputSeparator": ";"
+"outputSeparator": ";"
+"primaryKeyColumn":	1 // 1=first column
+"secondaryKeyColumn": 2 // 1=first column
+"columnsFromHeader": false
+"primaryKeyName": "BSN"
+"action": "countsec"   // countsec=count secundairy; ''=column grouping of secundaryKeyColumn 
