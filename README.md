@@ -3,8 +3,8 @@ CSV-converter
 
 Conversion tools for csv files, e.g. reorganized csv content for analyse purpose, use in statistic applications like SPSS.
 
-* simpleCsv2Csv.js	
-	'simple' conversion from 'n'-records with same primary key and one secondary key per record into one record for each distinct primary key extended with all possible secondary keys (see example). All primary and secondary keys wil be sorted asc.  
+* index.js	
+	Conversion from 'n'-records with same primary key and one secondary key per record into one record for each distinct primary key extended with all possible secondary keys (see examples). All primary and secondary keys wil be sorted asc.  
 
 ##Requests/issues:
 Send me a request if you want more than is already available, or register your issue.
